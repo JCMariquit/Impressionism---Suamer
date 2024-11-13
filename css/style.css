@@ -1,0 +1,377 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f8;
+    background-image: url('bg.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #3a6186, #89253e); /* Gradient */
+    color: white;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+    animation: fadeIn 1s ease;
+}
+
+/* Navigation Links */
+nav a {
+    color: white;
+    margin: 0 10px;
+    margin-top: 5px;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+nav a.active,
+nav a:hover {
+    background-color: #4d7a8e;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Introduction Card */
+.intro-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: center;
+    animation: slideIn 1s ease;
+}
+
+.intro-card h2 {
+    color: #567a8b;
+    margin-bottom: 15px;
+}
+
+.intro-card p {
+    color: #333;
+    line-height: 1.6em;
+    font-size: 1.1em;
+}
+
+/* Card Section */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 1s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    color: #567a8b;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+/* Media Elements */
+.gallery img {
+    width: 100%;
+    padding: 10px;
+}
+
+audio, video {
+    margin: 20px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .intro-card {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%; /* Adjust card width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        margin: 0 5px;
+        padding: 5px;
+    }
+
+    .intro-card p,
+    .card p {
+        font-size: 0.9em;
+    }
+
+    .gallery img {
+        width: 100%; /* Full width for gallery images on small screens */
+    }
+
+    .card {
+        width: 100%; /* Full width for cards on extra-small screens */
+    }
+}
+footer {
+    background-color: #3a6186;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    border-top: 2px solid #89253e;
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer .social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+footer .social-links a:hover {
+    opacity: 1;
+}
+
+footer .social-links img {
+    width: 20px;
+    height: 20px;
+}
+.reading-time {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-size: 0.9em;
+    margin-left: 10px;
+    font-weight: 600;
+}
+.text-container {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border: 1px solid #e0e0e0; /* Light border for structure */
+}
+
+.text-container h2 {
+    margin-top: 0;
+    color: #333; /* Darker color for headings */
+}
+
+.text-container p {
+    color: #555; /* Slightly lighter text for readability */
+}
+
+.reading-time {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-size: 0.9em;
+    margin-left: 10px;
+    font-weight: 600;
+}
+/* Make body and html take up the full height of the viewport */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Main content container */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main section to take remaining space */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal columns */
+    gap: 20px; /* Adds space between cards */
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Exactly 2 items per row */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center; /* Center cards in each grid cell */
+}
+
+.card {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    width: 100%; /* Ensure it takes full width of the grid cell */
+    max-width: 350px; /* Limit the card's maximum width */
+    border-radius: 8px; /* Rounded corners */
+    background-color: white; /* White background for better contrast */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect on hover */
+}
+
+.card img {
+    width: 100%; /* Ensure image fills the width of the card */
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px; /* More space between image and title */
+    border-radius: 4px; /* Round the image edges */
+}
+
+.card h2 {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #333; /* Title color */
+    font-weight: 600; /* Slightly bolder font for emphasis */
+}
+
+/* Hover effect to scale and add shadow */
+.card:hover {
+    transform: translateY(-5px); /* Slightly lift the card on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Optional: Make it responsive for smaller screens */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr; /* 1 image per row on smaller screens */
+    }
+}
+
+/* Media Grid Layout */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* Media Item Card Styling */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Full width of the grid cell */
+    max-width: 400px; /* Max width for cards */
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.card iframe, .card audio {
+    width: 100%; /* Full width for media elements */
+    height: auto; /* Maintain aspect ratio for iframes */
+    border-radius: 4px; /* Rounded corners for iframe */
+}
+
+.card h2 {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #333;
+    font-weight: 600;
+}
